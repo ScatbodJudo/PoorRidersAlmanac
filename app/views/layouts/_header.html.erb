@@ -1,11 +1,31 @@
+<% current_path = request.env['PATH_INFO'] %>
+
+<div class="container"> 
     <div class="blog-masthead">
+      <h1> The Poor Rider's Almanac </h1>
       <div class="container">
         <nav class="blog-nav">
-          <a class="blog-nav-item active" href="#">Home</a>
-          <a class="blog-nav-item" href="#">New features</a>
-          <a class="blog-nav-item" href="#">Press</a>
-          <a class="blog-nav-item" href="#">New hires</a>
-          <a class="blog-nav-item" href="#">About</a>
+
+          <a> <%= if current_path=="/" 
+                  link_to "Home", root_path, class: "blog-nav-item active"
+                  else link_to "Home", root_path, class: "blog-nav-item"
+                  end %> </a>
+
+          <a> <%= if current_path=="/about"  
+                  link_to "About", about_path, class: "blog-nav-item active"
+                  else link_to "About", about_path, class: "blog-nav-item"
+                  end %> </a>
+
+          <a> <%= if current_path=="/blog"
+                  link_to "Blog", blog_path, class: "blog-nav-item active"
+                  else link_to "Blog", blog_path, class: "blog-nav-item"
+                  end %> </a>
+
+
         </nav>
       </div>
     </div>
+</div>    
+
+
+
