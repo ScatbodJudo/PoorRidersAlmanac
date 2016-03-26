@@ -11,7 +11,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass', :git => 'https://github.com/twbs/bootstrap-sass.git', :branch => 'next'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem 'paperclip', github: 'thoughtbot/paperclip'
-
+gem 'aws-sdk', '~> 2'
 
 group :production do
 	gem 'pg'
