@@ -1,3 +1,5 @@
+<!-- delete this later -->
+<% @imageURL = "https://s3.amazonaws.com/poorridersalmanac/IMG_4897.JPG" %>
 
 <html lang="en"><head>
     <meta charset="utf-8">
@@ -42,7 +44,11 @@
       </ol>
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-           <%= link_to image_tag("IMG_5243.jpg", alt: "", size: "800x600", :class => "centerImage") %>
+         
+        <!--  replace this image URL with the correct one some how... this is was a test to see if AWS s3 works -->
+        <%= link_to image_tag(@imageURL, class: 'media-object'), @imageURL, target: '_blank' %>
+        
+
           <div class="container">
             <div class="carousel-caption">
               <h1>Bike Cleaning, story 1</h1>
