@@ -1,0 +1,9 @@
+<h1> this is the index page and it works, yay! </h1>
+
+<% @blogPosts.each do |p| %>
+	<p> <%= p %> </p>
+<% end %> 
+
+<%if @blogPosts.size == 0 %>
+	<p> There are no blog posts...go write some shit </p>
+<%end%>

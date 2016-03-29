@@ -1,18 +1,21 @@
 class BlogController < ApplicationController
+		before_action :load_posts
 
-	  def index
-    @blogPosts = BlogPost.all #.order("created_at DESC").paginate(:page => params[:page], :per_page => 8)
+
+	  def index  #this method puts all the stuff pulled from 'load_posts' and packages it nicely in a instanced variable
+    @blogPosts = BlogPost.all
+
   	end
 
-  	def new
-  		BlogPost.title = "My New Post"
-  		BlogPost.subTitle = "A walk in the woods"
-  		BlogPost.date = "1/1/2016"
-  		BlogPost.authorName = "Todd Jacobus"
+  	def load_posts  #this method should pull posts from AWS s3 and add them to the database (like magic)
+  		bucket = S3_BUCKET_NAME
+  		object = bucket.objects['TestObject1'];
   	end
-
-
 
 end
 
-new
+
+
+
+
+

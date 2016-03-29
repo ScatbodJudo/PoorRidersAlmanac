@@ -6,6 +6,11 @@ class PagesController < ApplicationController
   end
 
   def blog
+
+  end
+
+  def index
+  	@testVariable = "yay this works!!!"
   end
 end
 
