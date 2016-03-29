@@ -12,6 +12,7 @@ gem 'bootstrap-sass', :git => 'https://github.com/twbs/bootstrap-sass.git', :bra
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem 'paperclip', github: 'thoughtbot/paperclip'
 gem 'aws-sdk', '~> 2'
+gem 'figaro'
 
 group :production do
 	gem 'pg'

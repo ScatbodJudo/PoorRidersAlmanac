@@ -4,12 +4,10 @@ class BlogController < ApplicationController
 
 	  def index  #this method puts all the stuff pulled from 'load_posts' and packages it nicely in a instanced variable
     @blogPosts = BlogPost.all
-
   	end
 
   	def load_posts  #this method should pull posts from AWS s3 and add them to the database (like magic)
-  		bucket = S3_BUCKET_NAME
-  		object = bucket.objects['TestObject1'];
+ 
   	end
 
 end
