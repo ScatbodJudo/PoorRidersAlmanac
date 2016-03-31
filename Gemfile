@@ -13,6 +13,7 @@ gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem 'paperclip', github: 'thoughtbot/paperclip'
 gem 'aws-sdk', '~> 2'
 gem 'figaro'
+#gem 'carrierwave-aws'
 
 group :production do
 	gem 'pg'

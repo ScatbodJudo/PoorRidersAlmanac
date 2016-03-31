@@ -7,7 +7,7 @@ class BlogController < ApplicationController
   	end
 
   	def load_posts  #this method should pull posts from AWS s3 and add them to the database (like magic)
- 
+ 			
   	end
 
 end
